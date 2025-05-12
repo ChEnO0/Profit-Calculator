@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profit Calculator</title>
+</head>
+<body>
+  <h1 id="title">Profit Calculator</h1>
+  <div>
+    <label id="costLabel" for="cost">Cost:</label>
+    <input type="text" id="cost" placeholder="Enter cost">
+  </div>
+  <div>
+    <label id="currentLabel" for="current">Current Price:</label>
+    <input type="text" id="current" placeholder="Enter current price">
+  </div>
+  <div>
+    <label id="percentLabel" for="percent">Change %:</label>
+    <input type="text" id="percent" placeholder="Enter change percentage">
+  </div>
+  <div id="result"></div>
+  <button id="calculateButton">Calculate</button>
+  <button id="resetButton">Refresh</button>
+  <select id="languageSelect" onchange="switchLanguage()">
+    <option value="en">English</option>
+    <option value="zh">中文</option>
+  </select>
+  <script src="popup.js"></script>
+</body>
+</html>

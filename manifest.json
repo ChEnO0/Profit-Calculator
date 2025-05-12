@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Profit Calculator",
+    "version": "1.0",
+    "description": "Calculate stock cost, current price, or change percentage.",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": 
+        "hello_extensions.png"
+      
+    }
+    
+  }
