@@ -4,28 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profit Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <h1 id="title">Profit Calculator</h1>
-  <div>
-    <label id="costLabel" for="cost">Cost:</label>
-    <input type="text" id="cost" placeholder="Enter cost">
+  <div class="header">
+    <h1 id="title" class="title">Profit Calculator</h1>
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+      <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i> Dark
+      </button>
+    </div>
   </div>
-  <div>
-    <label id="currentLabel" for="current">Current Price:</label>
-    <input type="text" id="current" placeholder="Enter current price">
+
+    <div class="input-card">
+    <div class="input-group">
+      <label id="costLabel" for="cost">Cost:</label>
+      <input type="text" id="cost" placeholder="Enter cost" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label id="currentLabel" for="current">Current Price:</label>
+      <input type="text" id="current" placeholder="Enter current price" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label id="percentLabel" for="percent">Change %:</label>
+      <input type="text" id="percent" placeholder="Enter change percentage" autocomplete="off">
+    </div>
+
   </div>
-  <div>
-    <label id="percentLabel" for="percent">Change %:</label>
-    <input type="text" id="percent" placeholder="Enter change percentage">
+
+  <div class="button-group">
+    <button id="calculateButton" class="calculate-btn">Calculate</button>
+    <button id="resetButton" class="reset-btn">Refresh</button>
   </div>
-  <div id="result"></div>
-  <button id="calculateButton">Calculate</button>
-  <button id="resetButton">Refresh</button>
-  <select id="languageSelect" onchange="switchLanguage()">
-    <option value="en">English</option>
-    <option value="zh">中文</option>
-  </select>
+
+  <div id="result" class="result"></div>
+
+  <div class="footer">
+    <div>Profit Calculator v1.2 • <span id="currentYear">2025</span></div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>

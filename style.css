@@ -1,0 +1,232 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    width: 280px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 暗色主题 */
+body.dark-theme {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+    color: #f0f0f0;
+}
+
+/* 头部 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #4a6fa5;
+}
+
+.dark-theme .header {
+    border-bottom-color: #64b5f6;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dark-theme .title {
+    color: #fff;
+}
+
+/* 控制栏 */
+.controls {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.controls select {
+    flex: 1;
+    min-width: 80px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dark-theme .controls select {
+    background: #37474f;
+    border-color: #555;
+    color: #fff;
+}
+
+.theme-toggle {
+    padding: 5px 10px;
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 70px;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: #3a5a8a;
+}
+
+/* 输入卡片 */
+.input-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.dark-theme .input-card {
+    background: #2d3748;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 8px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #444;
+}
+
+.dark-theme .input-group label {
+    color: #ccc;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.dark-theme .input-group input[type="text"] {
+    background: #1a202c;
+    border-color: #555;
+    color: #fff;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+}
+
+/* 按钮组 */
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    background: linear-gradient(to right, #4a6fa5, #3a5a8a);
+    color: white;
+}
+
+.calculate-btn:hover {
+    background: linear-gradient(to right, #3a5a8a, #2a4a7a);
+}
+
+.reset-btn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.dark-theme .reset-btn {
+    background: #444;
+    color: #fff;
+}
+
+.reset-btn:hover {
+    background: #d0d0d0;
+}
+
+.dark-theme .reset-btn:hover {
+    background: #555;
+}
+
+/* 结果显示 */
+.result {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    min-height: 20px;
+}
+
+.dark-theme .result {
+    background: #2d3748;
+    color: #f0f0f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.result:empty {
+    display: none;
+}
+
+/* 底部信息 */
+.footer {
+    padding-top: 8px;
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    border-top: 1px solid #eee;
+}
+
+.dark-theme .footer {
+    color: #aaa;
+    border-top-color: #444;
+}
